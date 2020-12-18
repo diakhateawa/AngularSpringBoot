@@ -1,0 +1,20 @@
+<h2>Liste des departements</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Nom</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let departement of departements">
+    <td>{{departement.nomdept}}</td>
+    <td>
+      <button (click)="updateDepartement(departement.id)" class="btn btn-info">Update</button>
+      <button (click)="deleteDepartement(departement.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+      <button (click)="departementDetails(departement.id)" class="btn btn-info" style="margin-left: 10px">View</button>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
